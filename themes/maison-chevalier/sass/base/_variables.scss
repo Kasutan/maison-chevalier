@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+/*Local font*/
+/*
+@font-face {
+	font-family: 'ITC Bold';
+	src: url('fonts/itc-bold.otf');
+	font-display: swap;
+}*/
+
+
+:root {
+	--text-font: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	--radius: 3px;
+	--shadow: 1px 1px 1px var(--grey);
+	--padding-lien:.75rem 1.25rem;
+	--section-margin-bottom:2rem;
+}
+
+@media print, screen and (min-width:600px) {
+	:root {
+		--section-margin-bottom:4rem;
+	}
+}
+

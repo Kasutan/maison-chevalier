@@ -1,0 +1,285 @@
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+	/* overflow hidden prevents CSS sticky!*/
+	overflow-x:unset;
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li>ul,
+li>ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+a.button {
+	background: var(--main);
+	border: 1px solid;
+	border-color: var(--main);
+	border-radius: var(--radius);
+	color: var(--white);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1rem;
+	line-height: 1;
+	margin: 0 0 .5rem 0;
+	padding: var(--padding-lien);
+	text-align: center;
+	text-transform: none;
+	transition: all 0.5s ease-in-out;
+	vertical-align: middle;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+a.bouton:hover,
+button:active,
+button:focus,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="reset"]:active,
+input[type="reset"]:focus,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+a.bouton:focus,
+a.bouton:active {
+	background: var(--main-hover);
+	border-color: var(--main-hover);
+	text-decoration: none;
+}
+
+
+.accent-button,
+a.accent-button {
+	color: var(--white);
+	border: 1px solid var(--accent);
+	background: var(--accent);
+}
+
+.accent-button:hover,
+.accent-button:focus,
+.accent-button:active,
+a.accent-button:hover,
+a.accent-button:focus,
+a.accent-button:active {
+	color: var(--white);
+	background: var(--accent-hover);
+	border-color: var(--accent-hover);
+}
+
+
+.outline-button,
+a.outline-button {
+	background-color:transparent;
+	border-color:var(--main);
+	color:var(--main);
+}
+
+.outline-button:hover,
+.outline-button:focus,
+.outline-button:active,
+a.outline-button:hover,
+a.outline-button:focus,
+a.outline-button:active {
+	background-color:var(--main);
+	color:var(--white);
+}
+
+.full-button,
+a.full-button {
+display: block;
+width: 100%; }
+
+.square-button,
+a.square-button {
+border-radius: 0; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: var(--black);
+	border: 1px solid var(--dark-grey);
+	border-radius: var(--radius);
+	padding: 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: var(--black);
+
+}
+
+select {
+	border: 1px solid var(--grey);
+}
+
+textarea {
+	width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+## Search form
+--------------------------------------------------------------*/
+
+.search-form {
+	align-items: center;
+	justify-content: flex-start;
+}
+.search-form .search-field {
+	height: 30px;
+}
+.search-form .search-submit,
+.search-form .search-submit:hover,
+.search-form  .search-submit:focus,
+.search-form  .search-submit:active {
+	background-color:transparent;
+	background-image:url("icons/utility/search.svg"); /*Modifier la couleur du svg selon charte thème*/
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	border:none;
+	color:transparent;
+	margin-bottom: 0;
+	margin-left:0.5rem;
+	padding:0;
+	width:30px;
+	height:30px;
+	transition:none;
+}
+
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+

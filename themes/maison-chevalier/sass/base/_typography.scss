@@ -1,0 +1,202 @@
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #404040;
+	color: var(--black);
+	font-family: sans-serif;
+	font-family: var(--text-font);
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.2;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	clear: both;
+	font-family: var(--title-font);
+	margin: 1.5rem 0;
+	font-weight: 600;
+	line-height: 1.2;
+	color: #404040;
+	color: var(--black);
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child) {
+	margin: 1.5rem 0;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child) {
+	margin-top: 2rem;
+}
+
+h1 {
+	font-size: 1.75rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4, h2.widget-title {
+	font-size: 1.1rem;
+}
+
+h5 {
+	font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+
+	h1:not(:first-child),
+	h2:not(:first-child),
+	h3:not(:first-child) {
+		margin-top: 2.5rem;
+	}
+
+	h1 {
+		font-size: 2.25rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.75rem;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+	}
+
+	h5 {
+		font-size: 1.25rem;
+	}
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+small, .has-small-font-size  {
+	font-size: 80%;
+}
+
+.has-regular-font-size {
+	font-size: 1rem;
+}
+
+big, .has-big-font-size  {
+	font-size: 125%;
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: var(--radius);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
