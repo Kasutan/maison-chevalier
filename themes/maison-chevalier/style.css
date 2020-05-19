@@ -3,7 +3,7 @@
 Theme Name: Maison Chevalier
 Theme URI: http://underscores.me/
 Author: Magalie Castaing
-Author URI: https://kasutan.pro
+Author URI: https://kasutan.pro 
 Description: Description
 Version: 1.0.0
 License: GNU General Public License v2 or later
@@ -323,8 +323,8 @@ template {
 	font-display: swap;
 }*/
 :root {
-  --text-font: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --title-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --text-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --title-font: "Halant", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --radius: 3px;
   --shadow: 1px 1px 1px var(--grey);
   --padding-lien:.75rem 1.25rem;
@@ -1120,34 +1120,6 @@ object {
   text-align: center; }
 
 /*--------------------------------------------------------------
-# Boutons de partage 
---------------------------------------------------------------*/
-.boutons-partage {
-  margin: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.icone-partage {
-  background-color: var(--light-grey);
-  width: 30px;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-radius: 50%;
-  margin: 5px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.icone-partage:hover, .icone-partage:focus {
-  background-color: var(--grey); }
-
-/*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
 /* Containers */
@@ -1193,31 +1165,6 @@ object {
 
 #primary, #secondary {
   padding: 0 1rem; }
-
-/* Sidebar */
-@media print, screen and (min-width: 1200px) {
-  .single .site-content, .page-template-page-sidebar .site-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  #primary {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1; }
-  #secondary {
-    -ms-flex-preferred-size: 350px;
-    flex-basis: 350px;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    margin-left: 2rem; }
-  /*Empêcher le container bleed de déborder sur la sidebar*/
-  .single .bleed-container, .page-template-page-sidebar .bleed-container {
-    width: unset;
-    -webkit-transform: unset;
-    transform: unset;
-    max-width: calc(100% + 2rem);
-    /*compenser le padding de primary*/
-    margin: 0 -1rem var(--section-margin-bottom); } }
 
 /* Grid */
 .flex {
@@ -1524,7 +1471,6 @@ a:active {
   .entry-header,
   .topfooter,
   .site-footer,
-  .fil-ariane,
   .picto-flottant {
     display: none; }
   * {
@@ -1535,10 +1481,6 @@ a:active {
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
-.topfooter {
-  background-color: var(--accent);
-  padding: 1rem 0; }
-
 .site-footer {
   background-color: var(--main);
   color: var(--white);
@@ -1602,38 +1544,6 @@ a:active {
   padding: 0.2rem 0.2rem 0;
   margin: 0; }
 
-.topbar {
-  background: var(--main);
-  color: var(--white); }
-
-.topbar .widget {
-  margin-bottom: 0.5rem; }
-
-.topbar a {
-  color: var(--white); }
-
-.topbar ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
-  padding: 0; }
-
-.topbar ul li {
-  padding: var(--padding-lien); }
-
-@media print, screen and (min-width: 600px) {
-  .topbar .container {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between; }
-  .topbar .widget {
-    margin-bottom: 0; } }
-
 .site-branding {
   text-align: center; }
 
@@ -1649,66 +1559,6 @@ a.custom-logo-link {
 --------------------------------------------------------------*/
 .page-title {
   text-align: center; }
-
-/*--------------------------------------------------------------
-## Post loop
---------------------------------------------------------------*/
-.loop {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 2rem 0;
-  max-width: 1100px;
-  /*idem container*/
-  margin: 0 auto; }
-
-.loop article {
-  border: solid 1px var(--light-grey);
-  border-radius: var(--radius);
-  -webkit-box-shadow: var(--shadow);
-  box-shadow: var(--shadow);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-preferred-size: 300px;
-  flex-basis: 300px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 1rem;
-  margin: 0.5rem; }
-
-.loop .post-thumbnail {
-  display: block;
-  text-align: center; }
-
-.loop .entry-content {
-  margin-bottom: 1rem; }
-
-.loop .entry-footer {
-  margin-top: auto; }
-
-.loop .read-more-link {
-  background-image: url(icons/utility/angle-right.svg);
-  background-position: center right;
-  background-repeat: no-repeat;
-  display: block;
-  padding-right: 2rem;
-  text-align: right; }
-
-.loop .entry-meta, .loop .entry-footer {
-  font-style: italic; }
-
-@supports (grid-template-columns: 1fr) {
-  .loop {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); } }
 
 /*--------------------------------------------------------------
 ## Post single

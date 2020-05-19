@@ -127,7 +127,7 @@ add_action( 'widgets_init', 'chevalier_widgets_init' );
  */
 function chevalier_scripts() {
 	wp_enqueue_style( 'chevalier-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'chevalier-google-font', 'https://fonts.googleapis.com/css2?family=Halant:wght@500&family=Open+Sans:wght@400;700&family=Vidaloka&display=swap');
+	wp_enqueue_style( 'chevalier-google-fonts', 'https://fonts.googleapis.com/css?family=Halant:500|Open+Sans:400,700|Vidaloka&display=swap');
 
 	wp_enqueue_script( 'chevalier-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
