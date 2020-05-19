@@ -1142,6 +1142,9 @@ object {
 .content-section {
   margin-bottom: var(--section-margin-bottom); }
 
+body {
+  overflow-x: hidden; }
+
 .full-container, .alignfull {
   padding: 0;
   max-width: calc(100% + 2rem);
@@ -1157,14 +1160,11 @@ object {
   margin-bottom: var(--section-margin-bottom); }
 
 /* Site content */
-.site-content {
+.site-main {
   max-width: 1800px;
   min-height: 500px;
   margin: 0 auto;
   padding-bottom: 2rem; }
-
-#primary, #secondary {
-  padding: 0 1rem; }
 
 /* Grid */
 .flex {

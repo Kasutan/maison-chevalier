@@ -26,7 +26,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content">Aller directement au contenu</a>
+	<a class="skip-link screen-reader-text" href="#main">Aller directement au contenu</a>
 
 	<header id="masthead" class="site-header">
 
@@ -60,4 +60,3 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
