@@ -390,7 +390,7 @@ template {
   margin-top: 2rem; }
 
 .margin-bottom {
-  margin-bottom: var(--section-margin-bottom); }
+  margin-bottom: var(--margin-bottom); }
 
 :root {
   --blanc: #fff;
@@ -551,16 +551,21 @@ body {
   overflow-x: hidden; }
 
 :root {
-  --section-margin-bottom:80px; }
+  --margin-bottom:80px;
+  --padding-x:20px; }
   @media (min-width: 768px) {
     :root {
-      --section-margin-bottom:80px; } }
+      --margin-bottom:80px;
+      --padding-x: 5%; } }
+  @media (min-width: 1200px) {
+    :root {
+      --padding-x: calc(50vw - 1150px/2); } }
 
 .full-container, .alignfull {
   padding: 0;
   max-width: calc(100% + 40px);
   /*compenser le padding de primary*/
-  margin: 0 -20px var(--section-margin-bottom); }
+  margin: 0 -20px var(--margin-bottom); }
 
 .bleed-container {
   width: 100vw;
@@ -568,7 +573,7 @@ body {
   padding: 0;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  margin-bottom: var(--section-margin-bottom); }
+  margin-bottom: var(--margin-bottom); }
 
 /* Largeur maxi */
 .entry-content {
@@ -1219,14 +1224,50 @@ a:active {
   color: var(--gris-texte);
   text-decoration: none; }
 
+.site-header {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--beige);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100px;
+  overflow-y: visible;
+  padding: 0 var(--padding-x);
+  position: relative;
+  z-index: 2; }
+
 .site-branding {
-  text-align: center; }
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  position: relative;
+  height: 0; }
 
 a.custom-logo-link {
-  display: inline-block; }
+  background-color: var(--beige);
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+  top: 20px; }
 
 .custom-logo {
-  max-width: 200px;
-  margin: 0.5rem auto; }
+  max-width: 223px; }
+
+.home .entry-header {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; }
 
 /*# sourceMappingURL=style.css.map */
