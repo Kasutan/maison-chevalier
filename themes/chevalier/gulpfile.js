@@ -30,7 +30,7 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('sass/*.scss', ['styles']);
+  gulp.watch('sass/*/*.scss', ['styles']);
 
 
 
