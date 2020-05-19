@@ -76,11 +76,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 a.button {
-	background: var(--main);
+	background: var(--noir-fond);
 	border: 1px solid;
-	border-color: var(--main);
-	border-radius: var(--radius);
-	color: var(--white);
+	border-color: var(--noir-fond);
+	border-radius: 0;
+	color: var(--gris-texte);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1rem;
@@ -108,56 +108,12 @@ input[type="submit"]:active,
 input[type="submit"]:focus,
 a.bouton:focus,
 a.bouton:active {
-	background: var(--main-hover);
-	border-color: var(--main-hover);
+	background: var(--blanc);
+	color: var(--noir-texte);
 	text-decoration: none;
 }
 
 
-.accent-button,
-a.accent-button {
-	color: var(--white);
-	border: 1px solid var(--accent);
-	background: var(--accent);
-}
-
-.accent-button:hover,
-.accent-button:focus,
-.accent-button:active,
-a.accent-button:hover,
-a.accent-button:focus,
-a.accent-button:active {
-	color: var(--white);
-	background: var(--accent-hover);
-	border-color: var(--accent-hover);
-}
-
-
-.outline-button,
-a.outline-button {
-	background-color:transparent;
-	border-color:var(--main);
-	color:var(--main);
-}
-
-.outline-button:hover,
-.outline-button:focus,
-.outline-button:active,
-a.outline-button:hover,
-a.outline-button:focus,
-a.outline-button:active {
-	background-color:var(--main);
-	color:var(--white);
-}
-
-.full-button,
-a.full-button {
-display: block;
-width: 100%; }
-
-.square-button,
-a.square-button {
-border-radius: 0; }
 
 input[type="text"],
 input[type="email"],
@@ -175,9 +131,9 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: var(--black);
-	border: 1px solid var(--dark-grey);
-	border-radius: var(--radius);
+	color: var(--noir-texte);
+	border: 1px solid var(--gris-decor);
+	border-radius: 0;
 	padding: 3px;
 }
 
@@ -197,12 +153,12 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: var(--black);
+	color: var(--noir-texte);
 
 }
 
 select {
-	border: 1px solid var(--grey);
+	border: 1px solid var(--gris-decor);
 }
 
 textarea {

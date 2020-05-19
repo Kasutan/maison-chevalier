@@ -3,15 +3,13 @@
 --------------------------------------------------------------*/
 a,
 a:visited {
-	color: var(--main);
-	text-decoration: none;
+	color: var(--bleu);
 }
 
 a:hover,
 a:active,
 a:focus {
-	color: var(--main-hover);
-	text-decoration: underline;
+	color: var(--noir-texte);
 }
 
 a:focus {
@@ -79,22 +77,25 @@ a:active {
 }
 
 .main-navigation  a {
-	font-weight:600;
-	text-decoration: none;
-
-}
-
-.main-navigation .menu >li > a {
+	color:var(--noir-titre);
 	display: block;
-	font-size: 120%;
+	font-size: 0.875rem;
+	text-decoration: none;
 	text-transform:uppercase;
 }
 
-.main-navigation a:hover,
-.main-navigation a:active,
+.main-navigation .menu >li:first-of-type > a {
+	color:var(--bleu);
+
+}
+
+.main-navigation a:hover, .main-navigation a:active {
+	color:var(--bleu);
+}
+
 .main-navigation .current-menu-item a,
 .main-navigation .current-menu-ancestor > a {
-	color:var(--accent);
+	font-weight:700;
 }
 
 /* Small menu. */
@@ -106,8 +107,8 @@ a:active {
 }
 
 .main-navigation.toggled ul {
-	background-color:var(--light-grey);
-display: flex;
+	background-color:var(--gris-fond);
+	display: flex;
 	flex-direction: column;
 
 }
@@ -136,7 +137,7 @@ display: flex;
 		
 	}
 	.main-navigation  ul.sub-menu {
-		background-color:var(--white);
+		background-color:var(--blanc);
 		display: flex;
 		flex-direction: column;
 

@@ -665,7 +665,7 @@ h3 {
     font-size: 1.25rem; } }
 
 p {
-  margin-bottom: 1em; }
+  margin-bottom: 0.5rem; }
 
 dfn,
 cite,
@@ -802,11 +802,11 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 a.button {
-  background: var(--main);
+  background: var(--noir-fond);
   border: 1px solid;
-  border-color: var(--main);
-  border-radius: var(--radius);
-  color: var(--white);
+  border-color: var(--noir-fond);
+  border-radius: 0;
+  color: var(--gris-texte);
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
@@ -834,49 +834,9 @@ input[type="submit"]:active,
 input[type="submit"]:focus,
 a.bouton:focus,
 a.bouton:active {
-  background: var(--main-hover);
-  border-color: var(--main-hover);
+  background: var(--blanc);
+  color: var(--noir-texte);
   text-decoration: none; }
-
-.accent-button,
-a.accent-button {
-  color: var(--white);
-  border: 1px solid var(--accent);
-  background: var(--accent); }
-
-.accent-button:hover,
-.accent-button:focus,
-.accent-button:active,
-a.accent-button:hover,
-a.accent-button:focus,
-a.accent-button:active {
-  color: var(--white);
-  background: var(--accent-hover);
-  border-color: var(--accent-hover); }
-
-.outline-button,
-a.outline-button {
-  background-color: transparent;
-  border-color: var(--main);
-  color: var(--main); }
-
-.outline-button:hover,
-.outline-button:focus,
-.outline-button:active,
-a.outline-button:hover,
-a.outline-button:focus,
-a.outline-button:active {
-  background-color: var(--main);
-  color: var(--white); }
-
-.full-button,
-a.full-button {
-  display: block;
-  width: 100%; }
-
-.square-button,
-a.square-button {
-  border-radius: 0; }
 
 input[type="text"],
 input[type="email"],
@@ -894,9 +854,9 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: var(--black);
-  border: 1px solid var(--dark-grey);
-  border-radius: var(--radius);
+  color: var(--noir-texte);
+  border: 1px solid var(--gris-decor);
+  border-radius: 0;
   padding: 3px; }
 
 input[type="text"]:focus,
@@ -915,10 +875,10 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  color: var(--black); }
+  color: var(--noir-texte); }
 
 select {
-  border: 1px solid var(--grey); }
+  border: 1px solid var(--gris-decor); }
 
 textarea {
   width: 100%; }
@@ -997,14 +957,12 @@ object {
 --------------------------------------------------------------*/
 a,
 a:visited {
-  color: var(--main);
-  text-decoration: none; }
+  color: var(--bleu); }
 
 a:hover,
 a:active,
 a:focus {
-  color: var(--main-hover);
-  text-decoration: underline; }
+  color: var(--noir-texte); }
 
 a:focus {
   outline: thin dotted; }
@@ -1060,19 +1018,21 @@ a:active {
   position: relative; }
 
 .main-navigation a {
-  font-weight: 600;
-  text-decoration: none; }
-
-.main-navigation .menu > li > a {
+  color: var(--noir-titre);
   display: block;
-  font-size: 120%;
+  font-size: 0.875rem;
+  text-decoration: none;
   text-transform: uppercase; }
 
-.main-navigation a:hover,
-.main-navigation a:active,
+.main-navigation .menu > li:first-of-type > a {
+  color: var(--bleu); }
+
+.main-navigation a:hover, .main-navigation a:active {
+  color: var(--bleu); }
+
 .main-navigation .current-menu-item a,
 .main-navigation .current-menu-ancestor > a {
-  color: var(--accent); }
+  font-weight: 700; }
 
 /* Small menu. */
 .menu-toggle {
@@ -1081,7 +1041,7 @@ a:active {
   margin-right: auto; }
 
 .main-navigation.toggled ul {
-  background-color: var(--light-grey);
+  background-color: var(--gris-fond);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1119,7 +1079,7 @@ a:active {
     -ms-flex-pack: center;
     justify-content: center; }
   .main-navigation ul.sub-menu {
-    background-color: var(--white);
+    background-color: var(--blanc);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1252,67 +1212,14 @@ a:active {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: var(--main);
-  color: var(--white);
-  padding: 2rem 0 1rem; }
+  background-color: var(--noir-fond);
+  color: var(--gris-texte);
+  padding: 1rem;
+  text-align: center; }
 
-.site-footer a, .site-footer .widget-title {
-  color: var(--white); }
-
-.site-info {
-  position: relative; }
-
-.back-to-top {
-  background-color: var(--light-grey);
-  position: absolute;
-  top: -100px;
-  right: 1rem;
-  padding: 0.9rem 0.8rem 0.6rem;
-  border-radius: 50%; }
-
-.back-to-top:hover, .back-to-top:focus {
-  background-color: var(--grey); }
-
-.site-info ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-.site-info ul ul {
-  display: none; }
-
-.site-info li a {
-  text-transform: uppercase;
-  line-height: 1.5;
-  font-weight: 700;
+.site-footer a {
+  color: var(--gris-texte);
   text-decoration: none; }
-
-.site-info li a:hover,
-.site-info li a:focus,
-.site-info li a:active {
-  color: var(--accent); }
-
-#menu-reseaux-sociaux {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-#menu-reseaux-sociaux li {
-  padding: var(--padding-lien); }
-
-.widget_media_gallery .gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center; }
-
-.widget_media_gallery figure {
-  background-color: var(--white);
-  max-width: 80px;
-  padding: 0.2rem 0.2rem 0;
-  margin: 0; }
 
 .site-branding {
   text-align: center; }
@@ -1323,51 +1230,5 @@ a.custom-logo-link {
 .custom-logo {
   max-width: 200px;
   margin: 0.5rem auto; }
-
-/*--------------------------------------------------------------
-## All pages
---------------------------------------------------------------*/
-.page-title {
-  text-align: center; }
-
-/*--------------------------------------------------------------
-## Post single
---------------------------------------------------------------*/
-.single .entry-content {
-  margin-bottom: 2rem; }
-
-.single .entry-meta, .single .entry-footer {
-  font-style: italic; }
-
-.single article {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-bottom: solid 1px var(--grey); }
-
-.single .post-navigation {
-  background-color: var(--light-grey);
-  padding: 1rem; }
-
-/*--------------------------------------------------------------
-## Posts and pages
---------------------------------------------------------------*/
-.sticky {
-  display: block; }
-
-.updated:not(.published) {
-  display: none; }
-
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em; }
-
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-  word-wrap: break-word; }
-
-.bypostauthor {
-  display: block; }
 
 /*# sourceMappingURL=style.css.map */
