@@ -392,255 +392,157 @@ template {
 .margin-bottom {
   margin-bottom: var(--section-margin-bottom); }
 
-/* Déclinaisons couleurs charte Made with Geenes | geenes.app  */
-/*Main, accent et les variantes hover doivent avoir un contraste suffisant avec le blanc -> sinon, adapter les styles des liens et des boutons*/
 :root {
-  --main: #13547a;
-  --main-hover: #2296da;
-  --accent: #f4d706;
-  --accent-hover: #dcc205;
-  --light-grey: #ecf5f6;
-  --dark-grey: #828d8b;
-  --grey: #d1d1d1;
-  --white: #fff;
-  --black: #3D3D3D; }
+  --blanc: #fff;
+  --bleu: #283b6b;
+  --noir: #000;
+  --noir-titre: #19171a;
+  --noir-texte: #070809;
+  --noir-fond: #020304;
+  --gris-fond: #f9f9fb;
+  --gris-decor: #e0e0e2;
+  --gris-texte: #f9f9f9;
+  --beige: #e8e3e1; }
 
-:root {
-  --gradient: linear-gradient(15deg,var(--main) 0%,var(--main-hover) 100%); }
-
-.has-main-color {
-  color: #13547a; }
-
-.has-main-background-color {
-  background-color: #13547a; }
-
-a.has-main-background-color {
-  border: solid 1px #13547a; }
-  a.has-main-background-color:focus, a.has-main-background-color:hover {
-    background-color: transparent;
-    color: #13547a;
-    border-color: #13547a; }
-
-/*
-	.wp-block-button.inverse a.has-main-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-main {
-  border-color: #13547a; }
-
-.has-main-hover-color {
-  color: #2296da; }
-
-.has-main-hover-background-color {
-  background-color: #2296da; }
-
-a.has-main-hover-background-color {
-  border: solid 1px #2296da; }
-  a.has-main-hover-background-color:focus, a.has-main-hover-background-color:hover {
-    background-color: transparent;
-    color: #2296da;
-    border-color: #2296da; }
-
-/*
-	.wp-block-button.inverse a.has-main-hover-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-main-hover {
-  border-color: #2296da; }
-
-.has-accent-color {
-  color: #f4d706; }
-
-.has-accent-background-color {
-  background-color: #f4d706; }
-
-a.has-accent-background-color {
-  border: solid 1px #f4d706; }
-  a.has-accent-background-color:focus, a.has-accent-background-color:hover {
-    background-color: transparent;
-    color: #f4d706;
-    border-color: #f4d706; }
-
-/*
-	.wp-block-button.inverse a.has-accent-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-accent {
-  border-color: #f4d706; }
-
-.has-accent-hover-color {
-  color: #dcc205; }
-
-.has-accent-hover-background-color {
-  background-color: #dcc205; }
-
-a.has-accent-hover-background-color {
-  border: solid 1px #dcc205; }
-  a.has-accent-hover-background-color:focus, a.has-accent-hover-background-color:hover {
-    background-color: transparent;
-    color: #dcc205;
-    border-color: #dcc205; }
-
-/*
-	.wp-block-button.inverse a.has-accent-hover-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-accent-hover {
-  border-color: #dcc205; }
-
-.has-light-grey-color {
-  color: #ecf5f6; }
-
-.has-light-grey-background-color {
-  background-color: #ecf5f6; }
-
-a.has-light-grey-background-color {
-  border: solid 1px #ecf5f6; }
-  a.has-light-grey-background-color:focus, a.has-light-grey-background-color:hover {
-    background-color: transparent;
-    color: #ecf5f6;
-    border-color: #ecf5f6; }
-
-/*
-	.wp-block-button.inverse a.has-light-grey-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-light-grey {
-  border-color: #ecf5f6; }
-
-.has-dark-grey-color {
-  color: #828d8b; }
-
-.has-dark-grey-background-color {
-  background-color: #828d8b; }
-
-a.has-dark-grey-background-color {
-  border: solid 1px #828d8b; }
-  a.has-dark-grey-background-color:focus, a.has-dark-grey-background-color:hover {
-    background-color: transparent;
-    color: #828d8b;
-    border-color: #828d8b; }
-
-/*
-	.wp-block-button.inverse a.has-dark-grey-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-dark-grey {
-  border-color: #828d8b; }
-
-.has-grey-color {
-  color: #d1d1d1; }
-
-.has-grey-background-color {
-  background-color: #d1d1d1; }
-
-a.has-grey-background-color {
-  border: solid 1px #d1d1d1; }
-  a.has-grey-background-color:focus, a.has-grey-background-color:hover {
-    background-color: transparent;
-    color: #d1d1d1;
-    border-color: #d1d1d1; }
-
-/*
-	.wp-block-button.inverse a.has-grey-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-grey {
-  border-color: #d1d1d1; }
-
-.has-white-color {
+.has-blanc-color {
   color: #fff; }
 
-.has-white-background-color {
+.has-blanc-background-color {
   background-color: #fff; }
 
-a.has-white-background-color {
+a.wp-block-button__link.has-blanc-background-color {
   border: solid 1px #fff; }
-  a.has-white-background-color:focus, a.has-white-background-color:hover {
+  a.wp-block-button__link.has-blanc-background-color:focus, a.wp-block-button__link.has-blanc-background-color:hover {
     background-color: transparent;
     color: #fff;
-    border-color: #fff; }
+    border-color: #fff;
+    text-decoration: none; }
 
-/*
-	.wp-block-button.inverse a.has-white-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-white {
-  border-color: #fff; }
+.has-bleu-color {
+  color: #283b6b; }
 
-.has-black-color {
-  color: #3D3D3D; }
+.has-bleu-background-color {
+  background-color: #283b6b; }
 
-.has-black-background-color {
-  background-color: #3D3D3D; }
-
-a.has-black-background-color {
-  border: solid 1px #3D3D3D; }
-  a.has-black-background-color:focus, a.has-black-background-color:hover {
+a.wp-block-button__link.has-bleu-background-color {
+  border: solid 1px #283b6b; }
+  a.wp-block-button__link.has-bleu-background-color:focus, a.wp-block-button__link.has-bleu-background-color:hover {
     background-color: transparent;
-    color: #3D3D3D;
-    border-color: #3D3D3D; }
+    color: #283b6b;
+    border-color: #283b6b;
+    text-decoration: none; }
 
-/*
-	.wp-block-button.inverse a.has-black-color  {
-		border:solid 1px $color;
-		&:focus, &:hover {
-			background-color:$color;
-			color:#fff;
-			border-color:$color;
-		}
-	}
-*/
-.border-black {
-  border-color: #3D3D3D; }
+.has-noir-color {
+  color: #000; }
+
+.has-noir-background-color {
+  background-color: #000; }
+
+a.wp-block-button__link.has-noir-background-color {
+  border: solid 1px #000; }
+  a.wp-block-button__link.has-noir-background-color:focus, a.wp-block-button__link.has-noir-background-color:hover {
+    background-color: transparent;
+    color: #000;
+    border-color: #000;
+    text-decoration: none; }
+
+.has-noir-titre-color {
+  color: #19171a; }
+
+.has-noir-titre-background-color {
+  background-color: #19171a; }
+
+a.wp-block-button__link.has-noir-titre-background-color {
+  border: solid 1px #19171a; }
+  a.wp-block-button__link.has-noir-titre-background-color:focus, a.wp-block-button__link.has-noir-titre-background-color:hover {
+    background-color: transparent;
+    color: #19171a;
+    border-color: #19171a;
+    text-decoration: none; }
+
+.has-noir-texte-color {
+  color: #070809; }
+
+.has-noir-texte-background-color {
+  background-color: #070809; }
+
+a.wp-block-button__link.has-noir-texte-background-color {
+  border: solid 1px #070809; }
+  a.wp-block-button__link.has-noir-texte-background-color:focus, a.wp-block-button__link.has-noir-texte-background-color:hover {
+    background-color: transparent;
+    color: #070809;
+    border-color: #070809;
+    text-decoration: none; }
+
+.has-noir-fond-color {
+  color: #020304; }
+
+.has-noir-fond-background-color {
+  background-color: #020304; }
+
+a.wp-block-button__link.has-noir-fond-background-color {
+  border: solid 1px #020304; }
+  a.wp-block-button__link.has-noir-fond-background-color:focus, a.wp-block-button__link.has-noir-fond-background-color:hover {
+    background-color: transparent;
+    color: #020304;
+    border-color: #020304;
+    text-decoration: none; }
+
+.has-gris-fond-color {
+  color: #f9f9fb; }
+
+.has-gris-fond-background-color {
+  background-color: #f9f9fb; }
+
+a.wp-block-button__link.has-gris-fond-background-color {
+  border: solid 1px #f9f9fb; }
+  a.wp-block-button__link.has-gris-fond-background-color:focus, a.wp-block-button__link.has-gris-fond-background-color:hover {
+    background-color: transparent;
+    color: #f9f9fb;
+    border-color: #f9f9fb;
+    text-decoration: none; }
+
+.has-gris-decor-color {
+  color: #e0e0e2; }
+
+.has-gris-decor-background-color {
+  background-color: #e0e0e2; }
+
+a.wp-block-button__link.has-gris-decor-background-color {
+  border: solid 1px #e0e0e2; }
+  a.wp-block-button__link.has-gris-decor-background-color:focus, a.wp-block-button__link.has-gris-decor-background-color:hover {
+    background-color: transparent;
+    color: #e0e0e2;
+    border-color: #e0e0e2;
+    text-decoration: none; }
+
+.has-gris-texte-color {
+  color: #f9f9f9; }
+
+.has-gris-texte-background-color {
+  background-color: #f9f9f9; }
+
+a.wp-block-button__link.has-gris-texte-background-color {
+  border: solid 1px #f9f9f9; }
+  a.wp-block-button__link.has-gris-texte-background-color:focus, a.wp-block-button__link.has-gris-texte-background-color:hover {
+    background-color: transparent;
+    color: #f9f9f9;
+    border-color: #f9f9f9;
+    text-decoration: none; }
+
+.has-beige-color {
+  color: #e8e3e1; }
+
+.has-beige-background-color {
+  background-color: #e8e3e1; }
+
+a.wp-block-button__link.has-beige-background-color {
+  border: solid 1px #e8e3e1; }
+  a.wp-block-button__link.has-beige-background-color:focus, a.wp-block-button__link.has-beige-background-color:hover {
+    background-color: transparent;
+    color: #e8e3e1;
+    border-color: #e8e3e1;
+    text-decoration: none; }
 
 :root {
   --text-font: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;

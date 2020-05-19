@@ -10,48 +10,38 @@
 add_theme_support( 'editor-color-palette', array(
 	
 	array(
-		'name'  =>'Principale',
-		'slug'  => 'main',
-		'color'	=> '#13547a',
+		'name'  =>'Bleu',
+		'slug'  => 'bleu',
+		'color'	=> '#283b6b',
 	),
 	array(
-		'name'  =>'Principale 2',
-		'slug'  => 'main-hover',
-		'color'	=> '#2296da',
+		'name'  =>'Noir texte',
+		'slug'  => 'noir-texte',
+		'color'	=> '#070809',
 	),
 	array(
-		'name'  =>'Accent',
-		'slug'  => 'accent',
-		'color'	=> '#f4d706',
+		'name'  =>'Gris texte',
+		'slug'  => 'gris-texte',
+		'color'	=> '#f9f9f9',
 	),
 	array(
-		'name'  =>'Accent 2',
-		'slug'  => 'accent-hover',
-		'color'	=> '#dcc205',
+		'name'  =>'Noir fond',
+		'slug'  => 'noir-fond',
+		'color'	=> '#020304',
 	),
 	array(
-		'name'  =>'Gris clair',
-		'slug'  => 'light-grey',
-		'color'	=> '#ecf5f6',
+		'name'  =>'Gris fond',
+		'slug'  => 'gris-fond',
+		'color'	=> '#f9f9fb',
 	),
 	array(
-		'name'  =>'Gris',
-		'slug'  => 'medium-grey',
-		'color'	=> '#d1d1d1',
-	),
-	array(
-		'name'  =>'Gris foncé',
-		'slug'  => 'dark-grey',
-		'color'	=> '#828d8b',
-	),
-	array(
-		'name'  =>'Noir',
-		'slug'  => 'black',
-		'color'	=> '#3D3D3D',
+		'name'  =>'Beige',
+		'slug'  => 'beige',
+		'color'	=> '#e8e3e1',
 	),
 	array(
 		'name'  =>'Blanc',
-		'slug'  => 'white',
+		'slug'  => 'blanc',
 		'color'	=> '#ffffff',
 	),
 ));
