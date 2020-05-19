@@ -65,14 +65,6 @@
 	visibility: hidden;
 }
 
-.float-left {
-	float: left;
-}
-
-.float-right {
-	float: right;
-}
-
 .no-padding-top {
 	padding-top: 0;
 }
@@ -105,75 +97,5 @@
 	margin-bottom:var(--section-margin-bottom);
 }
 
-.alternate-background {
-	background: var(--main);
-	color: var(--white);
-}
-
-.rounded {
-	border-radius: var(--radius);
-}
-
-.shadow {
-	box-shadow: var(--shadow);
-}
-
-// Center block
-@mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-// Clearfix
-@mixin clearfix() {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-// Clear after (not all clearfix need this also)
-@mixin clearfix-after() {
-	clear: both;
-}
-
-// Breakpoints
-@mixin bp($point) {
-  
-	$sm: "(min-width: 576px)";
-	$md: "(min-width: 768px)";
-	$lg: "(min-width: 960px)";
-	$xl: "(min-width: 1200px)";
-  
-	@if $point == sm {
-	  @media #{$sm} { @content; }
-	}
-	@else if $point == md {
-	  @media #{$md} { @content; }
-	}
-
-	@else if $point == lg {
-	  @media #{$lg} { @content; }
-	}
-  
-	@else if $point == xl {
-	  @media #{$xl} { @content; }
-	}
-}
 
 
-
-/*--------------------------------------------------------------
-# Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation,
-.infinite-scroll.neverending .site-footer {
-	/* Theme Footer (when set to scrolling) */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
