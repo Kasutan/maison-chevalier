@@ -1,0 +1,51 @@
+.acf-block-deux-colonnes {
+	display: flex;
+	flex-direction: column;
+	align-items:stretch;
+	justify-content: center;
+	margin-bottom:var(--margin-bottom);
+	padding:0 2rem;
+	.image-container {
+		img {
+			display: block;
+			margin:0 auto 1rem;
+		}
+	}
+	.texte-container {
+		background-color:var(--gris-fond);
+		max-width:100%;
+		padding:2rem 0 0;
+	}
+	.titre, .texte {
+		padding:0 1rem;
+	}
+	.decor {
+		align-items:flex-start;
+		display:flex;
+		justify-content: flex-start;
+	}
+	svg {
+		flex-shrink: 1;
+	}
+	.chiffre {
+		color:var(--beige);
+		font-family:'Halant';
+		font-size: 120px;
+		height: 90px;
+		line-height: 1;
+		position: relative;
+		top: 12px;
+	}
+
+	@include bp(md) {
+		.texte-container {
+			padding-bottom:1rem;
+		}
+		.chiffre {
+			font-size:220px;
+			height:138px;
+			line-height:0.87;
+			top:0;
+		}
+	}
+}
