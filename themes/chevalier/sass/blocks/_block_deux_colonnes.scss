@@ -36,7 +36,6 @@
 		position: relative;
 		top: 12px;
 	}
-
 	@include bp(md) {
 		.texte-container {
 			padding-bottom:1rem;
@@ -46,6 +45,55 @@
 			height:138px;
 			line-height:0.87;
 			top:0;
+		}
+	}
+	@include bp(lg) {
+		align-items:flex-start;
+		flex-direction:row;
+		margin-top:60px;
+		margin-bottom:calc(2 * var(--margin-bottom));
+		.texte-container {
+			flex-basis:67%;
+			position: relative;
+			padding-top:60px;
+			padding-left:12%; //TODO calculer grille
+			top:-60px;
+			left:-6%;
+		}
+		.image-container {
+			flex-basis:47%;
+			left:6%;
+			position:relative;
+			z-index:2;
+			img {
+				margin-bottom:0;
+			}
+		}
+		&:nth-of-type(2n) { //TODO remplacer par une classe "inverse" ajoutée en JS
+			flex-direction: row-reverse;
+			.texte-container {
+				text-align: right;
+				padding-left:0;
+				padding-right:12%;
+				top:-60px;
+				left:0;
+			}
+			.image-container {
+				left:-12%;
+			}
+			.decor {
+				flex-direction: row-reverse;
+			}
+		}
+		
+	}
+	@include bp(xl) {
+		.texte-container {
+			left:-74px;
+			padding-left:148px;
+		}
+		.image-container {
+			left:74px;
 		}
 	}
 }
