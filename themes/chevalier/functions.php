@@ -172,7 +172,7 @@ function chevalier_block_categories( $categories, $post ) {
 }
 add_filter( 'block_categories', 'chevalier_block_categories', 10, 2 );
 
-//require_once( 'blocks/acf-block-articles-accueil.php' );
+require_once( 'blocks/acf-block-banniere.php' );
 
 /**
 * Page options
