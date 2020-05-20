@@ -60,18 +60,21 @@ body {
 	margin-bottom:var(--margin-bottom);
 }
 
-/* Largeur maxi, hauteur mini */
-
-.entry-content {
+.container {
 	max-width:1190px;
 	margin:0 auto;
 	padding:0 20px;
 }
+
+/* Hauteur mini main*/
+
 .site {
 	position: relative;
 }
 .site-main {
 	min-height:calc(100vh - 50px);
+}
+.page-template-default .site-main {
 	padding-top:var(--header-height);
 }
 

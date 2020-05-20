@@ -1,0 +1,54 @@
+.acf-block-banniere {
+	.banniere-container {
+		align-items: center;
+		background-color:var(--gris-fond);
+		display: flex;
+		justify-content: center;
+		min-height:39vw;
+		padding-top:var(--header-height);
+		position:relative;
+	}
+
+	.image-container {
+		display: flex;
+		height:100%;
+		left:0;
+		position:absolute;
+		top:0;
+		width:100%;
+		img {
+			object-fit: cover;
+			width:100%;
+		}
+	}
+
+	.texte.h1 {
+		font-size:2.2rem;
+		position: relative;
+	}
+
+	.intro {
+		background-color:var(--gris-fond);
+		color:var(--noir);
+		padding:25px var(--padding-x);
+		margin-bottom:5px;
+		text-align:center;
+	}
+
+	@include bp(md) {
+		.texte.h1 {
+			font-size:3.1rem;
+		}
+		.intro {
+			font-size:1.11em;
+		}
+	}
+
+	@include bp(xl) {
+		.banniere-container {
+			min-height:561px;
+		}
+		
+	}
+
+}

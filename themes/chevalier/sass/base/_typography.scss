@@ -22,7 +22,8 @@ textarea {
 
 h1,
 h2,
-h3
+h3,
+.h1
 {
 	clear: both;
 	color: #19171a;
@@ -33,7 +34,7 @@ h3
 	text-transform: uppercase;
 }
 
-h1 {
+h1, .h1 {
 	margin:0;
 	padding:1em;
 	text-align:center;
@@ -42,7 +43,7 @@ h2, h3 {
 	margin:0 0 1em;
 }
 
-h1 {
+h1, .h1 {
 	font-size: 1.75rem;
 }
 
@@ -57,7 +58,7 @@ h3 {
 
 @include bp(md) {
 
-	h1 {
+	h1, .h1 {
 		font-size: 2.5rem;
 	}
 

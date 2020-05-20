@@ -576,17 +576,19 @@ body {
   transform: translateX(-50%);
   margin-bottom: var(--margin-bottom); }
 
-/* Largeur maxi, hauteur mini */
-.entry-content {
+.container {
   max-width: 1190px;
   margin: 0 auto;
   padding: 0 20px; }
 
+/* Hauteur mini main*/
 .site {
   position: relative; }
 
 .site-main {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px); }
+
+.page-template-default .site-main {
   padding-top: var(--header-height); }
 
 /* Grid */
@@ -641,7 +643,8 @@ textarea {
 
 h1,
 h2,
-h3 {
+h3,
+.h1 {
   clear: both;
   color: #19171a;
   color: var(--noir-titre);
@@ -650,7 +653,7 @@ h3 {
   line-height: 1.2;
   text-transform: uppercase; }
 
-h1 {
+h1, .h1 {
   margin: 0;
   padding: 1em;
   text-align: center; }
@@ -658,7 +661,7 @@ h1 {
 h2, h3 {
   margin: 0 0 1em; }
 
-h1 {
+h1, .h1 {
   font-size: 1.75rem; }
 
 h2 {
@@ -668,7 +671,7 @@ h3 {
   font-size: 1.25rem; }
 
 @media (min-width: 768px) {
-  h1 {
+  h1, .h1 {
     font-size: 2.5rem; }
   h2 {
     font-size: 2.25 rem; }
@@ -1319,5 +1322,55 @@ svg.times {
   bottom: 0;
   left: 0;
   width: 100%; }
+
+.acf-block-banniere .banniere-container {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: var(--gris-fond);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 39vw;
+  padding-top: var(--header-height);
+  position: relative; }
+
+.acf-block-banniere .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  .acf-block-banniere .image-container img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%; }
+
+.acf-block-banniere .texte.h1 {
+  font-size: 2.2rem;
+  position: relative; }
+
+.acf-block-banniere .intro {
+  background-color: var(--gris-fond);
+  color: var(--noir);
+  padding: 25px var(--padding-x);
+  margin-bottom: 5px;
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .acf-block-banniere .texte.h1 {
+    font-size: 3.1rem; }
+  .acf-block-banniere .intro {
+    font-size: 1.11em; } }
+
+@media (min-width: 1200px) {
+  .acf-block-banniere .banniere-container {
+    min-height: 561px; } }
 
 /*# sourceMappingURL=style.css.map */
