@@ -7,6 +7,7 @@
 .site-footer {
 	background-color:var(--noir-fond);
 	color:var(--gris-texte);
+	font-size:13px;
 	padding:1rem;
 	text-align: center;
 }
@@ -14,4 +15,7 @@
 .site-footer a {
 	color:var(--gris-texte);
 	text-decoration: none;
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
 }

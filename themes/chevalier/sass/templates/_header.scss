@@ -4,9 +4,12 @@
 	display: flex;
 	justify-content: center;
 	height:100px;
+	left:0;
 	overflow-y: visible;
 	padding: 0 var(--padding-x);
-	position: relative;
+	position: absolute;
+	top:0;
+	width:100%;
 	z-index:2;
 }
 .site-branding {
@@ -15,7 +18,6 @@
 	height:0;
 }
 a.custom-logo-link {
-	background-color:var(--beige);
 	display: inline-block;
 	padding-bottom:10px;
 	position:relative;

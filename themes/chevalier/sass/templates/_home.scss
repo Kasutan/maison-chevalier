@@ -11,4 +11,18 @@
 		width: 1px;
 		word-wrap: normal !important;
 	}
+	.site-header {
+		background-color:transparent;
+	}
+	.site-main {
+		min-height:100vh;
+	}
+	.site-footer {
+		position: fixed;
+		z-index:2;
+		bottom:0;
+		left:0;
+		width:100%;
+	}
+	
 }
