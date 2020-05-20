@@ -27,7 +27,6 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 }
 
@@ -101,30 +100,51 @@ a:active {
 /* Small menu. */
 
 .menu-toggle {
+	background:transparent;
+	border:0;
+	color:var(--noir-titre);
 	display: block;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: 0;
+	&:hover, &:focus, &:active {
+		background:transparent;
+	}
+}
+svg.times {
+	display:none;
+}
+.main-navigation.toggled {
+	svg.menu {
+		display:none;
+	}
+	svg.times {
+		display:block;
+	}
+	ul {
+		background-color:var(--blanc);
+		display: flex;
+		flex-direction: column;
+		position:absolute;
+		left:0;
+		top:var(--header-height);
+		width:100vw;
+
+		ul {
+			box-shadow: unset;
+			display : flex;
+			flex-direction: column;
+			position:relative;
+			top:unset;
+			z-index:unset;
+			left:unset;
+		}
+	}
+
+
 }
 
-.main-navigation.toggled ul {
-	background-color:var(--gris-fond);
-	display: flex;
-	flex-direction: column;
 
-}
-.main-navigation.toggled ul ul {
-	box-shadow: unset;
-	display : flex;
-	flex-direction: column;
-	position:relative;
-	top:unset;
-	z-index:unset;
-	left:unset;
-
-}
-
-
-@media screen and (min-width: 600px) {
+@include bp(md) {
 	.menu-toggle {
 		display: none;
 	}
