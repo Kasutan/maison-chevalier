@@ -7,7 +7,7 @@ function chevalier_acf_block_banniere_acf_init() {
 		acf_register_block_type( [
 			'name'            => 'acf-banniere',
 			'title'           => 'Bloc bannière avec titre',
-			'description'     => 'Bloc bannière avec image, texte en sur-impression, texte en dessous et grand titre, à placer en haut de la page',
+			'description'     => 'Bloc bannière avec image, texte en sur-impression, texte en dessous et grand titre, à placer en haut de la page. Ce bloc ne peut être inséré qu\'une fois par page.',
 			'render_callback' => 'chevalier_banniere_callback',
 			'category'        => 'chevalier',
 			'icon'            => 'format-image',
@@ -35,7 +35,7 @@ function chevalier_banniere_callback( $block ) {
 	$titre=wp_kses_post( get_field('titre') );
 	$texte=wp_kses_post( get_field('texte') );
 	$intro=wp_kses_post( get_field('intro') );
-	printf('<header class="acf-block-banniere %s"><div class="banniere-container"><div class="image-container">%s</div>',
+	printf('<header class="acf-block-banniere alignfull %s"><div class="banniere-container"><div class="image-container">%s</div>',
 		$className,
 		wp_get_attachment_image( $image_id,'large' )
 	);
