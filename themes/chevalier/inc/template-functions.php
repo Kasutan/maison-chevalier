@@ -17,11 +17,6 @@ function chevalier_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
-	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-		$classes[] = 'no-sidebar';
-	}
-
 	return $classes;
 }
 add_filter( 'body_class', 'chevalier_body_classes' );
@@ -46,6 +41,33 @@ function chevalier_get_picto_url($name) {
 
 function chevalier_get_picto_social_url($name) {
 	return get_template_directory_uri() . '/icons/social/'.$name.'.svg';
+}
+
+
+/**
+* Chercher si la page contient un bloc bannière ACF.
+*/
+function chevalier_page_avec_banniere() {
+	if( ! ( is_singular() && function_exists( 'parse_blocks' ) ) )
+		return;
+
+	global $post;
+	$blocks = parse_blocks( $post->post_content );
+
+	foreach ( $blocks as $block ) {
+
+		if( ! isset( $block['blockName'] ) )
+			continue;
+
+		// Custom header block
+		if( 'acf/acf-banniere' === $block['blockName'] ) {
+			return true;
+
+		// Heading block
+		} 
+	}
+
+	return false;
 }
 
 
