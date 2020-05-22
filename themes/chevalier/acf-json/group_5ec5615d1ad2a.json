@@ -84,6 +84,31 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5ec79cf95701c",
+            "label": "Largeur maximale du bloc",
+            "name": "largeur",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "medium": "moyenne (1054px)",
+                "wide": "large (1440px)",
+                "full": "largeur de l'écran"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "full",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -103,5 +128,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1589994127
+    "modified": 1590141143
 }
