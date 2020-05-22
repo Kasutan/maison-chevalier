@@ -8,13 +8,17 @@
 	.image-container {
 		img {
 			display: block;
-			margin:0 auto 1rem;
+			margin:0 auto;
 		}
 	}
 	.texte-container {
-		background-color:var(--gris-fond);
 		max-width:100%;
+		
+	}
+	.texte-content {
+		background-color:var(--gris-fond);
 		padding:2rem 0 0;
+		position: relative;
 	}
 	.titre, .texte {
 		padding:0 1rem;
@@ -37,7 +41,7 @@
 		top: 12px;
 	}
 	@include bp(md) {
-		.texte-container {
+		.texte-content {
 			padding-bottom:1rem;
 		}
 		.chiffre {
@@ -50,50 +54,68 @@
 	@include bp(lg) {
 		align-items:flex-start;
 		flex-direction:row;
-		margin-top:60px;
+		margin-top:69px;
 		margin-bottom:calc(2 * var(--margin-bottom));
-		.texte-container {
-			flex-basis:67%;
-			position: relative;
-			padding-top:60px;
-			padding-left:12%; //TODO calculer grille
-			top:-60px;
-			left:-6%;
+		padding:0;
+		--chevauchement:200px;
+		--largeur-image:47%;
+		--largeur-texte:53%;
+
+
+		&.alignmedium {
+			--chevauchement:340px;
+			--largeur-image:42%;
+			--largeur-texte:58%;
+			max-width:1054px;
+			margin-left:auto;
+			margin-right:auto;
 		}
+
+
 		.image-container {
-			flex-basis:47%;
-			left:6%;
-			position:relative;
+			flex-shrink:0;
+			flex-basis:var(--largeur-image);
+			max-width:var(--largeur-image);
 			z-index:2;
 			img {
-				margin-bottom:0;
+				margin-right:0;
 			}
 		}
+		.texte-container {
+			flex-basis:var(--largeur-texte);
+			max-width:var(--largeur-texte);
+			position: relative;
+			top:-69px;
+
+		}
+		.texte-content {
+			padding-top:69px;
+			width:calc(100% + var(--chevauchement));
+			padding-left:var(--chevauchement); 
+			left:calc(-1 * var(--chevauchement)); 
+		}
+		
 		&:nth-of-type(2n) { //TODO remplacer par une classe "inverse" ajoutée en JS
 			flex-direction: row-reverse;
-			.texte-container {
+			.texte-content {
 				text-align: right;
 				padding-left:0;
-				padding-right:12%;
-				top:-60px;
+				padding-right:var(--chevauchement);
 				left:0;
 			}
 			.image-container {
-				left:-12%;
+				left:calc(-1 * var(--chevauchement)); 
+				img {
+					margin-left:0;
+					margin-right:auto;
+				}
 			}
 			.decor {
 				flex-direction: row-reverse;
 			}
 		}
+
 		
-	}
-	@include bp(xl) {
-		.texte-container {
-			left:-74px;
-			padding-left:148px;
-		}
-		.image-container {
-			left:74px;
-		}
+		
 	}
 }

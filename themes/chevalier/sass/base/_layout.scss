@@ -46,16 +46,13 @@ body {
 	}
 }
 
-.full-container, .alignfull {
-	padding: 0;
-	max-width: calc(100% + 40px); /*compenser le padding de primary*/
-	margin: 0 -20px var(--margin-bottom); 
-}
 
-.bleed-container {
+
+.alignfull , .bleed-container {
 	width: 100vw;
 	margin-left: 50%;
-	padding: 0;
+	padding-left: 0;
+	padding-right: 0;
 	transform: translateX(-50%);
 	margin-bottom:var(--margin-bottom);
 }

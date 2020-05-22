@@ -562,16 +562,11 @@ body {
     :root {
       --padding-x: calc(50vw - 1150px/2); } }
 
-.full-container, .alignfull {
-  padding: 0;
-  max-width: calc(100% + 40px);
-  /*compenser le padding de primary*/
-  margin: 0 -20px var(--margin-bottom); }
-
-.bleed-container {
+.alignfull, .bleed-container {
   width: 100vw;
   margin-left: 50%;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   margin-bottom: var(--margin-bottom); }
@@ -1391,11 +1386,13 @@ svg.times {
   padding: 0 2rem; }
   .acf-block-deux-colonnes .image-container img {
     display: block;
-    margin: 0 auto 1rem; }
+    margin: 0 auto; }
   .acf-block-deux-colonnes .texte-container {
+    max-width: 100%; }
+  .acf-block-deux-colonnes .texte-content {
     background-color: var(--gris-fond);
-    max-width: 100%;
-    padding: 2rem 0 0; }
+    padding: 2rem 0 0;
+    position: relative; }
   .acf-block-deux-colonnes .titre, .acf-block-deux-colonnes .texte {
     padding: 0 1rem; }
   .acf-block-deux-colonnes .decor {
@@ -1420,7 +1417,7 @@ svg.times {
     position: relative;
     top: 12px; }
   @media (min-width: 768px) {
-    .acf-block-deux-colonnes .texte-container {
+    .acf-block-deux-colonnes .texte-content {
       padding-bottom: 1rem; }
     .acf-block-deux-colonnes .chiffre {
       font-size: 220px;
@@ -1436,47 +1433,58 @@ svg.times {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      margin-top: 60px;
-      margin-bottom: calc(2 * var(--margin-bottom)); }
-      .acf-block-deux-colonnes .texte-container {
-        -ms-flex-preferred-size: 67%;
-        flex-basis: 67%;
-        position: relative;
-        padding-top: 60px;
-        padding-left: 12%;
-        top: -60px;
-        left: -6%; }
+      margin-top: 69px;
+      margin-bottom: calc(2 * var(--margin-bottom));
+      padding: 0;
+      --chevauchement:200px;
+      --largeur-image:47%;
+      --largeur-texte:53%; }
+      .acf-block-deux-colonnes.alignmedium {
+        --chevauchement:340px;
+        --largeur-image:42%;
+        --largeur-texte:58%;
+        max-width: 1054px;
+        margin-left: auto;
+        margin-right: auto; }
       .acf-block-deux-colonnes .image-container {
-        -ms-flex-preferred-size: 47%;
-        flex-basis: 47%;
-        left: 6%;
-        position: relative;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        -ms-flex-preferred-size: var(--largeur-image);
+        flex-basis: var(--largeur-image);
+        max-width: var(--largeur-image);
         z-index: 2; }
         .acf-block-deux-colonnes .image-container img {
-          margin-bottom: 0; }
+          margin-right: 0; }
+      .acf-block-deux-colonnes .texte-container {
+        -ms-flex-preferred-size: var(--largeur-texte);
+        flex-basis: var(--largeur-texte);
+        max-width: var(--largeur-texte);
+        position: relative;
+        top: -69px; }
+      .acf-block-deux-colonnes .texte-content {
+        padding-top: 69px;
+        width: calc(100% + var(--chevauchement));
+        padding-left: var(--chevauchement);
+        left: calc(-1 * var(--chevauchement)); }
       .acf-block-deux-colonnes:nth-of-type(2n) {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-        .acf-block-deux-colonnes:nth-of-type(2n) .texte-container {
+        .acf-block-deux-colonnes:nth-of-type(2n) .texte-content {
           text-align: right;
           padding-left: 0;
-          padding-right: 12%;
-          top: -60px;
+          padding-right: var(--chevauchement);
           left: 0; }
         .acf-block-deux-colonnes:nth-of-type(2n) .image-container {
-          left: -12%; }
+          left: calc(-1 * var(--chevauchement)); }
+          .acf-block-deux-colonnes:nth-of-type(2n) .image-container img {
+            margin-left: 0;
+            margin-right: auto; }
         .acf-block-deux-colonnes:nth-of-type(2n) .decor {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: reverse;
           -ms-flex-direction: row-reverse;
           flex-direction: row-reverse; } }
-  @media (min-width: 1200px) {
-    .acf-block-deux-colonnes .texte-container {
-      left: -74px;
-      padding-left: 148px; }
-    .acf-block-deux-colonnes .image-container {
-      left: 74px; } }
 
 /*# sourceMappingURL=style.css.map */
