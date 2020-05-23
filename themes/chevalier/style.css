@@ -1592,9 +1592,11 @@ svg.times {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-bottom: 3rem; }
+    padding-bottom: 3rem;
+    position: relative; }
     .acf-block-avec-fond .texte-container h2 {
-      color: var(--blanc); }
+      color: var(--blanc);
+      font-size: 2.25rem; }
   @media (min-width: 768px) {
     .acf-block-avec-fond {
       padding: 4rem 2rem 0; } }
@@ -1665,5 +1667,47 @@ svg.times {
 @media screen and (min-width: 1230px) {
   .acf-block-custom .texte-container, .acf-block-custom .pictos {
     max-width: 1200px; } }
+
+.acf-block-valeurs .colonnes {
+  background-color: var(--blanc);
+  color: var(--noir);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  text-align: left; }
+
+.acf-block-valeurs .colonne {
+  -ms-flex-preferred-size: 408px;
+  flex-basis: 408px;
+  -webkit-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  padding: 1rem; }
+  .acf-block-valeurs .colonne h3 {
+    font-size: 26px;
+    margin-bottom: 0; }
+  .acf-block-valeurs .colonne p {
+    margin-top: 0; }
+
+@media (min-width: 768px) {
+  .acf-block-valeurs .texte-container, .acf-block-valeurs .colonnes {
+    max-width: 1100px; }
+  .acf-block-valeurs .colonnes {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 3rem; } }
+
+@media (min-width: 960px) {
+  .acf-block-valeurs .colonnes {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    padding: 4rem; } }
 
 /*# sourceMappingURL=style.css.map */
