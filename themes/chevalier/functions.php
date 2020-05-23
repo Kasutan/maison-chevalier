@@ -175,6 +175,7 @@ add_filter( 'block_categories', 'chevalier_block_categories', 10, 2 );
 require_once( 'blocks/acf-block-banniere.php' );
 require_once( 'blocks/acf-block-2-colonnes.php' );
 require_once( 'blocks/acf-block-1-colonne.php' );
+require_once( 'blocks/acf-block-custom-made.php' );
 
 /**
 * Page options
