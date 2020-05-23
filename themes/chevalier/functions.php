@@ -176,6 +176,7 @@ require_once( 'blocks/acf-block-banniere.php' );
 require_once( 'blocks/acf-block-2-colonnes.php' );
 require_once( 'blocks/acf-block-1-colonne.php' );
 require_once( 'blocks/acf-block-custom-made.php' );
+require_once( 'blocks/acf-block-valeurs.php' );
 
 /**
 * Page options
