@@ -33,7 +33,7 @@ function chevalier_custom_callback( $block ) {
 	$image_id=esc_attr( get_field('image') );
 	$titre=wp_kses_post( get_field('titre') );
 	$texte=wp_kses_post( get_field('texte') );
-	printf('<section class="acf-block-custom alignfull %s"><div class="image-container">%s</div>',
+	printf('<section class="acf-block-custom acf-block-avec-fond alignfull %s"><div class="image-container">%s</div>',
 		$className,
 		wp_get_attachment_image( $image_id,'large' )
 	);
