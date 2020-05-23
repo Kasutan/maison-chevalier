@@ -95,7 +95,7 @@
 			left:calc(-1 * var(--chevauchement)); 
 		}
 		
-		&:nth-of-type(2n) { //TODO remplacer par une classe "inverse" ajoutée en JS
+		&.pair { //classe ajoutée en JS aux blocs pairs de ce type de blocs
 			flex-direction: row-reverse;
 			.texte-content {
 				text-align: right;

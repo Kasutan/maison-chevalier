@@ -1,10 +1,8 @@
 (function($) {
-	/*Exemple de script javascript*/
-	/*$("#home-contact").on('click', function(e) { 
-		e.preventDefault();   
-		$('#home-contact-form').slideToggle('slow');
-	});*/
 
+	$(".acf-block-deux-colonnes").filter(function(index, element){
+		return index % 2 == 1; //index commence à zéro
+	}).addClass("pair");
 	/*--------------------------------------------------------------
 	# Animations
 	--------------------------------------------------------------*/

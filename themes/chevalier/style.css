@@ -1471,22 +1471,22 @@ svg.times {
         width: calc(100% + var(--chevauchement));
         padding-left: var(--chevauchement);
         left: calc(-1 * var(--chevauchement)); }
-      .acf-block-deux-colonnes:nth-of-type(2n) {
+      .acf-block-deux-colonnes.pair {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
-        .acf-block-deux-colonnes:nth-of-type(2n) .texte-content {
+        .acf-block-deux-colonnes.pair .texte-content {
           text-align: right;
           padding-left: 0;
           padding-right: var(--chevauchement);
           left: 0; }
-        .acf-block-deux-colonnes:nth-of-type(2n) .image-container {
+        .acf-block-deux-colonnes.pair .image-container {
           left: calc(-1 * var(--chevauchement)); }
-          .acf-block-deux-colonnes:nth-of-type(2n) .image-container img {
+          .acf-block-deux-colonnes.pair .image-container img {
             margin-left: 0;
             margin-right: auto; }
-        .acf-block-deux-colonnes:nth-of-type(2n) .decor {
+        .acf-block-deux-colonnes.pair .decor {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: reverse;
           -ms-flex-direction: row-reverse;
