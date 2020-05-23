@@ -1412,6 +1412,8 @@ svg.times {
     padding: 0 1rem; }
   .acf-block-deux-colonnes .texte {
     margin-bottom: 2rem; }
+    .acf-block-deux-colonnes .texte p {
+      margin-top: 0; }
   .acf-block-deux-colonnes .decor {
     -webkit-box-align: start;
     -ms-flex-align: start;
