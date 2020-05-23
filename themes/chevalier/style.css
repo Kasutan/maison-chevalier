@@ -1492,19 +1492,27 @@ svg.times {
         -ms-flex-direction: row-reverse;
         flex-direction: row-reverse; }
         .acf-block-deux-colonnes.pair .texte-content {
-          text-align: right;
           padding-left: 0;
           padding-right: var(--chevauchement);
           left: 0; }
+        .acf-block-deux-colonnes.pair.alignfull .texte-content {
+          -webkit-box-align: end;
+          -ms-flex-align: end;
+          align-items: flex-end; }
+        .acf-block-deux-colonnes.pair.alignfull .titre {
+          text-align: right; }
+        .acf-block-deux-colonnes.pair.alignmedium .texte-content {
+          padding-left: 3rem; }
+        .acf-block-deux-colonnes.pair.alignmedium .texte {
+          margin-bottom: -30px; }
+        .acf-block-deux-colonnes.pair.alignmedium .decor {
+          position: relative;
+          top: 50px; }
         .acf-block-deux-colonnes.pair .image-container {
           left: calc(-1 * var(--chevauchement)); }
           .acf-block-deux-colonnes.pair .image-container img {
             margin-left: 0;
             margin-right: auto; }
-        .acf-block-deux-colonnes.pair .texte-content {
-          -webkit-box-align: end;
-          -ms-flex-align: end;
-          align-items: flex-end; }
         .acf-block-deux-colonnes.pair .decor {
           -webkit-box-orient: horizontal;
           -webkit-box-direction: reverse;

@@ -109,10 +109,29 @@
 		&.pair { //classe ajoutée en JS aux blocs pairs de ce type de blocs
 			flex-direction: row-reverse;
 			.texte-content {
-				text-align: right;
 				padding-left:0;
 				padding-right:var(--chevauchement);
 				left:0;
+			}
+			&.alignfull {
+				.texte-content {
+					align-items: flex-end;
+				}
+				.titre {
+					text-align: right;
+				}
+			}
+			&.alignmedium {
+				.texte-content {
+					padding-left:3rem;
+				}
+				.texte {
+					margin-bottom:-30px;
+				}
+				.decor {
+					position:relative;
+					top: 50px;
+				}
 			}
 			.image-container {
 				left:calc(-1 * var(--chevauchement)); 
@@ -121,9 +140,7 @@
 					margin-right:auto;
 				}
 			}
-			.texte-content {
-				align-items: flex-end;
-			}
+
 			.decor {
 				flex-direction: row-reverse;
 			}
