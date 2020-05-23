@@ -1458,6 +1458,8 @@ svg.times {
       --chevauchement:200px;
       --largeur-image:47%;
       --largeur-texte:53%; }
+      .acf-block-deux-colonnes.extra-padding-top {
+        padding-top: 2rem; }
       .acf-block-deux-colonnes.alignmedium {
         --chevauchement:340px;
         --largeur-image:42%;

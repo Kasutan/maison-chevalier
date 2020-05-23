@@ -70,6 +70,9 @@
 		--largeur-image:47%;
 		--largeur-texte:53%;
 
+		&.extra-padding-top { //ajoutée au bloc Gut dans l'écran d'édition pour éviter margin collapse avec le bloc banniere
+			padding-top:2rem;
+		}
 
 		&.alignmedium {
 			--chevauchement:340px;
