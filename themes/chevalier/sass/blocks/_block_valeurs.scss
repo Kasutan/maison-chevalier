@@ -16,7 +16,7 @@
 		flex-grow:0;
 		padding:1rem;
 		h3 {
-			font-size:26px;
+			font-size:1.4rem;
 			margin-bottom:0;
 		}
 		p {
@@ -32,6 +32,9 @@
 		.colonnes {
 			justify-content: space-around;
 			padding:3rem;
+		}
+		.colonne h3 {
+			font-size:1.625rem;
 		}
 
 	}

@@ -29,8 +29,8 @@
 		align-items: center;
 		display: flex;
 		flex-direction: column-reverse;
-		height:139px;
 		margin-bottom:1rem;
+		min-height:112px;
 		img {
 			margin:auto auto 0;
 		}
@@ -44,6 +44,9 @@
 		.picto {
 			flex-basis:220px;
 			padding:13px;
+		}
+		.picto-container {
+			height:139px;
 		}
 		.texte-container, .pictos {
 			max-width: 800px;

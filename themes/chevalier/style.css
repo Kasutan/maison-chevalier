@@ -551,7 +551,7 @@ body {
   overflow-x: hidden; }
 
 :root {
-  --margin-bottom:80px;
+  --margin-bottom:40px;
   --padding-x:20px;
   --header-height:80px; }
   @media (min-width: 768px) {
@@ -662,10 +662,10 @@ h2, h3 {
   margin: 0 0 1em; }
 
 h1, .h1 {
-  font-size: 1.75rem; }
+  font-size: 2rem; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 h3 {
   font-size: 1.25rem; }
@@ -674,7 +674,7 @@ h3 {
   h1, .h1 {
     font-size: 2.5rem; }
   h2 {
-    font-size: 2.25 rem; }
+    font-size: 2.25rem; }
   h3 {
     font-size: 1.25rem; } }
 
@@ -1434,7 +1434,8 @@ svg.times {
     justify-content: flex-start; }
   .acf-block-deux-colonnes svg {
     -ms-flex-negative: 1;
-    flex-shrink: 1; }
+    flex-shrink: 1;
+    max-width: 100%; }
   .acf-block-deux-colonnes .chiffre {
     color: var(--beige);
     font-family: 'Halant';
@@ -1631,11 +1632,11 @@ svg.times {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-bottom: 3rem;
     position: relative; }
     .acf-block-avec-fond .texte-container h2 {
-      color: var(--blanc);
-      font-size: 2.25rem; }
+      color: var(--blanc); }
+    .acf-block-avec-fond .texte-container .texte {
+      padding-bottom: 3rem; }
   @media (min-width: 768px) {
     .acf-block-avec-fond {
       padding: 4rem 2rem 0; } }
@@ -1685,8 +1686,8 @@ svg.times {
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  height: 139px;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  min-height: 112px; }
   .acf-block-custom .picto-container img {
     margin: auto auto 0; }
 
@@ -1700,6 +1701,8 @@ svg.times {
     -ms-flex-preferred-size: 220px;
     flex-basis: 220px;
     padding: 13px; }
+  .acf-block-custom .picto-container {
+    height: 139px; }
   .acf-block-custom .texte-container, .acf-block-custom .pictos {
     max-width: 800px; } }
 
@@ -1730,7 +1733,7 @@ svg.times {
   flex-grow: 0;
   padding: 1rem; }
   .acf-block-valeurs .colonne h3 {
-    font-size: 26px;
+    font-size: 1.4rem;
     margin-bottom: 0; }
   .acf-block-valeurs .colonne p {
     margin-top: 0; }
@@ -1741,7 +1744,9 @@ svg.times {
   .acf-block-valeurs .colonnes {
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    padding: 3rem; } }
+    padding: 3rem; }
+  .acf-block-valeurs .colonne h3 {
+    font-size: 1.625rem; } }
 
 @media (min-width: 960px) {
   .acf-block-valeurs .colonnes {
