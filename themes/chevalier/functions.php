@@ -142,7 +142,6 @@ add_action( 'wp_enqueue_scripts', 'chevalier_scripts' );
  * Functions which enhance the theme by hooking into WordPress.
  */
 require get_template_directory() . '/inc/template-functions.php';
-require get_template_directory() . '/inc/template-tags.php';
 
 /**
 * Image sizes. Work first with medium and large in admin if possible

@@ -22,12 +22,16 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+				<header class="entry-header">
+					<?php printf('<h1 class="page-title">%s</h1>',
+						remove_accents( get_the_title() )
+					);?>
 				</header>
-				<section>
 				<?php
 			endif;
+
+			
+			echo '<div class="entry-content container loop">';
 
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -44,7 +48,6 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				</section>
 				<?php
 			endif;
 
@@ -53,6 +56,8 @@ get_header();
 			else :
 				the_posts_navigation();
 			endif;
+
+			echo '</div>';
 
 		else :
 

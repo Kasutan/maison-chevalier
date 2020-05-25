@@ -1323,6 +1323,20 @@ svg.times {
   left: 0;
   width: 100%; }
 
+.single-post .entry-meta {
+  text-align: center; }
+
+.entry-content.loop article {
+  margin-bottom: var(--margin-bottom); }
+
+.entry-content.loop h2.item-title {
+  margin-bottom: 0; }
+  .entry-content.loop h2.item-title a {
+    text-decoration: none; }
+
+.entry-content .search-form {
+  margin: 2rem auto; }
+
 .acf-block-banniere .banniere-container {
   -webkit-box-align: center;
   -ms-flex-align: center;

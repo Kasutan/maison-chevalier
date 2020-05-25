@@ -14,14 +14,14 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="entry-header">
 				<h1 class="page-title">
 					<?php
-					echo "Résultats de la recherche&nbsp;:".' <span>'. get_search_query() . '</span>' ;
+					echo "Resultats de la recherche&nbsp;:".' <span>'. get_search_query() . '</span>' ;
 					?>
 				</h1>
 			</header><!-- .page-header -->
-
+			<div class="entry-content container loop">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -32,7 +32,7 @@ get_header();
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', 'search' );
+				get_template_part( 'template-parts/content', 'loop' );
 
 			endwhile;
 
@@ -41,6 +41,9 @@ get_header();
 			else :
 				the_posts_navigation();
 			endif;
+
+			
+			echo '</div>'; //fin entry-content
 
 		else :
 

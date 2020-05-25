@@ -10,26 +10,22 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<main id="main" class="site-main">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title">Cette page est introuvable.</h1>
-				</header><!-- .page-header -->
+			<header class="entry-header">
+				<h1 class="page-title">Page introuvable</h1>
+			</header><!-- .page-header -->
 
-				<div class="page-content">
-					<p>Voulez-vous essayer une recherche&nbsp;?</p>
+			<div class="entry-content container">
+				<p>Cette page n'existe pas. Voulez-vous essayer une recherche&nbsp;?</p>
 
-					<?php
-					get_search_form();
+				<?php
+				get_search_form();
 
-					?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+				?>
+			</div><!-- .page-content -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
 
 <?php
 get_footer();

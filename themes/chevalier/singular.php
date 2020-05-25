@@ -30,8 +30,7 @@ get_header();
 					?>
 					<div class="entry-meta">
 						<?php
-						chevalier_posted_on();
-						chevalier_posted_by();
+						the_date('', 'Publié le ');
 						?>
 					</div><!-- .entry-meta -->
 				<?php endif; ?>
@@ -46,10 +45,6 @@ get_header();
 		</div><!-- .entry-content -->
 
 		<?php	
-		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
 
 endwhile; // End of the loop. ?>
 
