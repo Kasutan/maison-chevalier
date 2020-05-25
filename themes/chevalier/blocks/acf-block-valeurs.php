@@ -31,7 +31,7 @@ function chevalier_valeurs_callback( $block ) {
 
 
 	$image_id=esc_attr( get_field('image') );
-	$titre=strip_tags(wp_kses_post( get_field('titre') ),'<br><em><strong>');
+	$titre=remove_accents(strip_tags(wp_kses_post( get_field('titre') ),'<br><em><strong>'));
 	$texte=wp_kses_post( get_field('texte') );
 	$colonne_gauche=wp_kses_post( get_field('colonne_gauche') );
 	$colonne_droite=wp_kses_post( get_field('colonne_droite') );

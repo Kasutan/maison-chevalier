@@ -25,7 +25,10 @@ get_header();
 
 			<header class="entry-header">
 				
-				<?php the_title( '<h1 class="page-title">', '</h1>' );?>
+				<?php printf('<h1 class="page-title">%s</h1>',
+					remove_accents( get_the_title() )
+				);?>
+				
 				<?php if ( 'post' === get_post_type() ) :
 					?>
 					<div class="entry-meta">

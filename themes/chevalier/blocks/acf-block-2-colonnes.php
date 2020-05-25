@@ -33,7 +33,7 @@ function chevalier_2_colonnes_callback( $block ) {
 
 
 	$image_id=esc_attr( get_field('image') );
-	$titre=wp_kses_post( get_field('titre') );
+	$titre=remove_accents(wp_kses_post( get_field('titre') ));
 	$texte=wp_kses_post( get_field('texte') );
 	$chiffre=wp_kses_post( get_field('chiffre') );
 	$largeur=esc_attr( get_field('largeur') );

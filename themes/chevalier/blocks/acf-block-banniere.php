@@ -32,8 +32,8 @@ function chevalier_banniere_callback( $block ) {
 
 
 	$image_id=wp_kses_post( get_field('image') );
-	$titre=wp_kses_post( get_field('titre') );
-	$texte=wp_kses_post( get_field('texte') );
+	$titre=remove_accents(wp_kses_post( get_field('titre') ));
+	$texte=remove_accents(wp_kses_post( get_field('texte') ));
 	$intro=wp_kses_post( get_field('intro') );
 	printf('<header class="acf-block-banniere alignfull %s"><div class="banniere-container"><div class="image-container">%s</div>',
 		$className,

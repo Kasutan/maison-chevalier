@@ -31,7 +31,7 @@ function chevalier_custom_callback( $block ) {
 
 
 	$image_id=esc_attr( get_field('image') );
-	$titre=strip_tags(wp_kses_post( get_field('titre') ),'<br><em><strong>');
+	$titre=remove_accents(strip_tags(wp_kses_post( get_field('titre') ),'<br><em><strong>'));
 	$texte=wp_kses_post( get_field('texte') );
 	printf('<section class="acf-block-custom acf-block-avec-fond alignfull %s"><div class="image-container">%s</div>',
 		$className,

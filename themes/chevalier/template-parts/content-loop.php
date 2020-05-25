@@ -11,7 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php
-			the_title( '<h2 class="item-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			printf( '<h2 class="item-title"><a href="%s" rel="bookmark">%s</a></h2>',
+				esc_url( get_permalink() ),
+				get_the_title()
+			);
 		
 
 		if ( 'post' === get_post_type() ) :
@@ -24,6 +27,7 @@
 		<?php endif; ?>
 		<?php
 		the_excerpt();
-		echo '<a href="<?php the_permalink();?>" class="read-more-link">Lire la suite<span class="screen-reader-text">'.get_the_title().'</span></a>';
-		?>
+		if ( 'post' === get_post_type() ) :
+			echo '<a href="<?php the_permalink();?>" class="read-more-link">Lire la suite<span class="screen-reader-text">'.get_the_title().'</span></a>';
+		endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

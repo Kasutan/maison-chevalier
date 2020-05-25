@@ -32,7 +32,7 @@ function chevalier_1_colonne_callback( $block ) {
 	}
 
 
-	$titre=wp_kses_post( get_field('titre') );
+	$titre=remove_accents(wp_kses_post( get_field('titre') ));
 	$texte=wp_kses_post( get_field('texte') );
 
 	printf('<section class="acf-block-une-colonne alignfull %s">',$className);
