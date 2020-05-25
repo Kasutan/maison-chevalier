@@ -760,12 +760,6 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
-body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */
-  /* overflow hidden prevents CSS sticky!*/
-  overflow-x: unset; }
-
 hr {
   background-color: #ccc;
   border: 0;
