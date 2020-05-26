@@ -30,12 +30,13 @@
 
 	a.custom-logo-link {
 		display: inline-block;
-		padding-bottom: 10px;
+		
 		position: relative;
 		top: 20px;
 	}
-
 	.custom-logo {
+		background-color:var(--blanc);
 		max-width: 223px;
+		padding: 0 40px 30px;
 	}
 }
