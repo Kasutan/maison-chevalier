@@ -1235,11 +1235,49 @@ svg.times {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: var(--noir-fond);
   color: var(--gris-texte);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   font-size: 13px;
-  padding: 1rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 3px;
   text-align: center; }
+  .site-footer ul.menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .site-footer ul.menu li:not(:first-of-type)::before {
+      content: '|';
+      padding: 0 10px; }
+  @media (min-width: 768px) {
+    .site-footer {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      padding: 10px; }
+      .site-footer > div:not(:first-of-type) {
+        position: relative;
+        margin-left: 20px; }
+        .site-footer > div:not(:first-of-type)::before {
+          content: '|';
+          position: absolute;
+          left: -12px;
+          top: 0; } }
 
 .site-footer a {
   color: var(--gris-texte);

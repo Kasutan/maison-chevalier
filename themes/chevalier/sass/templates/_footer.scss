@@ -5,11 +5,45 @@
 
 
 .site-footer {
+	align-items:center;
 	background-color:var(--noir-fond);
 	color:var(--gris-texte);
+	display: flex;
+	flex-direction: column;
 	font-size:13px;
-	padding:1rem;
+	justify-content:center;
+	padding:3px;
 	text-align: center;
+
+
+	ul.menu {
+		display:flex;
+		list-style: none;
+		margin:0;
+		padding:0;
+		li:not(:first-of-type) {
+			&::before {
+				content:'|';
+				padding:0 10px;
+			}
+		}
+	}
+
+	@include bp(md) {
+		flex-direction:row;
+		padding:10px;
+		> div:not(:first-of-type) {
+			position :relative;
+			margin-left:20px;
+			&::before {
+				content:'|';
+				position: absolute;
+				left:-12px;
+				top:0;
+			}
+		}
+	}
+
 }
 
 .site-footer a {
@@ -19,3 +53,5 @@
 		text-decoration: underline;
 	}
 }
+
+
