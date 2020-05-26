@@ -1292,19 +1292,6 @@ svg.times {
 .home .site-main {
   padding-top: 0; }
 
-.home .entry-header {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important; }
-
 .home .site-header {
   background-color: transparent; }
 
