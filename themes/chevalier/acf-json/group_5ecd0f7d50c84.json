@@ -1,0 +1,48 @@
+{
+    "key": "group_5ecd0f7d50c84",
+    "title": "Masquer le titre ?",
+    "fields": [
+        {
+            "key": "field_5ecd0f99296c3",
+            "label": "Masquer le titre de la page",
+            "name": "masquer_titre_page",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "oui",
+                "2": "non"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": 2,
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1590497296
+}

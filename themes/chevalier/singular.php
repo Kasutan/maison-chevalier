@@ -13,13 +13,20 @@
  */
 
 get_header();
+
+$masquer_titre=false;
+if(function_exists('chevalier_page_avec_banniere') && chevalier_page_avec_banniere()) {
+	$masquer_titre=true;
+} else if(function_exists('get_field') && get_field('masquer_titre_page')=='1') {
+	$masquer_titre=true;
+}
 ?>
 
 <main id="main" class="site-main">
 <?php
 	while ( have_posts() ) :
 		the_post();
-		if(function_exists('chevalier_page_avec_banniere') && chevalier_page_avec_banniere()) :
+		if($masquer_titre) :
 			the_title( '<h1 class="page-title screen-reader-text">', '</h1>' );
 		else : ?>
 
