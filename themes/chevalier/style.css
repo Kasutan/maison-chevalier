@@ -581,15 +581,16 @@ body {
   position: relative; }
 
 .site-main {
-  min-height: calc(100vh - 50px);
+  min-height: 100vh;
   padding-top: var(--header-height); }
 
-/*si le premier bloc dans entry-content est un bloc banniere ACF, alors la page n'a pas de page-header-> on décale vers le haut
-.entry-content header.acf-block-banniere:first-child{
-	margin-top:calc(-1* var(--header-height));
-}
+@media (min-width: 768px) {
+  .site-main {
+    min-height: calc(100vh - 50px); } }
 
-
+/*si le premier bloc dans entry-content est un bloc banniere ACF, alors la page n'a pas de page-header-> on décale vers le haut*/
+.entry-content header.acf-block-banniere:first-child {
+  margin-top: calc(-1* var(--header-height)); }
 
 /* Grid */
 .flex {
@@ -1333,15 +1334,13 @@ svg.times {
 .home .site-header {
   background-color: transparent; }
 
-.home .site-main {
-  min-height: 100vh; }
-
-.home .site-footer {
-  position: fixed;
-  z-index: 2;
-  bottom: 0;
-  left: 0;
-  width: 100%; }
+@media (min-width: 768px) {
+  .home .site-footer {
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%; } }
 
 .home .custom-logo {
   background: transparent; }

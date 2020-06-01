@@ -5,15 +5,14 @@
 	.site-header {
 		background-color:transparent;
 	}
-	.site-main {
-		min-height:100vh;
-	}
-	.site-footer {
-		position: fixed;
-		z-index:2;
-		bottom:0;
-		left:0;
-		width:100%;
+	@include bp(md) {
+		.site-footer {
+			position: fixed;
+			z-index:2;
+			bottom:0;
+			left:0;
+			width:100%;
+		}
 	}
 	.custom-logo {
 		background: transparent;

@@ -69,11 +69,16 @@ body {
 	position: relative;
 }
 .site-main {
-	min-height:calc(100vh - 50px);
+	min-height:100vh;
 	padding-top:var(--header-height);
 
 }
-/*si le premier bloc dans entry-content est un bloc banniere ACF, alors la page n'a pas de page-header-> on décale vers le haut
+@include bp(md) {
+	.site-main {
+		min-height:calc(100vh - 50px);
+	}
+}
+/*si le premier bloc dans entry-content est un bloc banniere ACF, alors la page n'a pas de page-header-> on décale vers le haut*/
 .entry-content header.acf-block-banniere:first-child{
 	margin-top:calc(-1* var(--header-height));
 }
