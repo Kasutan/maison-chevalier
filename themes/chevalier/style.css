@@ -1581,11 +1581,11 @@ svg.times {
   .acf-block-une-colonne .texte-container {
     background-color: var(--gris-fond);
     margin-bottom: 1rem;
-    max-width: 540px;
+    max-width: 560px;
     padding: 2rem;
     text-align: center; }
   .acf-block-une-colonne .decor {
-    max-width: 540px; }
+    max-width: 520px; }
     .acf-block-une-colonne .decor svg {
       max-width: 100%; }
   @media (min-width: 768px) {
@@ -1612,8 +1612,8 @@ svg.times {
       .acf-block-une-colonne .spacer {
         display: block; }
       .acf-block-une-colonne .spacer, .acf-block-une-colonne .decor {
-        -ms-flex-preferred-size: 190px;
-        flex-basis: 190px;
+        -ms-flex-preferred-size: 180px;
+        flex-basis: 180px;
         -webkit-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1; } }

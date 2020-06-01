@@ -11,12 +11,12 @@
 	.texte-container {
 		background-color:var(--gris-fond);
 		margin-bottom:1rem;
-		max-width:540px;
+		max-width:560px;
 		padding:2rem;
 		text-align: center;
 	}
 	.decor {
-		max-width:540px;
+		max-width:520px;
 		svg {
 			max-width: 100%;
 		}
@@ -45,7 +45,7 @@
 			display: block;
 		}
 		.spacer, .decor {
-			flex-basis:190px;
+			flex-basis:180px;
 			flex-grow:1;
 		}
 		
