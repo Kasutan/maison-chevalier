@@ -3,58 +3,22 @@
 	$(".acf-block-deux-colonnes").filter(function(index, element){
 		return index % 2 == 1; //index commence à zéro
 	}).addClass("pair");
-	/*--------------------------------------------------------------
-	# Animations
-	--------------------------------------------------------------*/
-	/*https://alligator.io/js/intersection-observer*/
 
-	//Only Use the IntersectionObserver if it is supported
-	if ('IntersectionObserver' in window) {
-		const config = {
-			rootMargin: '50px 20px 75px 30px',
-			//threshold: [0, 0.25, 0.75, 1]
-			};
 
-			
-		observer = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.intersectionRatio > 0) {
-				entry.target.classList.add('fancy');
-				observer.unobserve(entry.target);
-				} else {
-				entry.target.classList.remove('fancy');
+	$( document ).ready(function() {
+	
+			setTimeout(function(){ 
+				var slider=$('#slider-pro-3-225 .sp-mask');
+				console.log(slider);
+				if(slider.length > 0 & window.Width() < 768) {
+					var sliderHeight=$(slider).outerHeight();
+					var newHeight=sliderHeight+140;
+					slider.css('height',newHeight+'px');
 				}
-			}, config);
-		});
 
-		const fancyElements=document.querySelectorAll('.js-animate-on-visible');
-		fancyElements.forEach(elem => {
-			observer.observe(elem);
-		});
-
-
-		observer2 = new IntersectionObserver((entries) => {
-			entries.forEach(entry => {
-				if (entry.intersectionRatio > 0) {
-				$(entry.target).children().addClass('fancy-cascade');
-				observer.unobserve(entry.target);
-				} else {
-				$(entry.target).children().removeClass('fancy-cascade');
-				}
-			}, config);
-		});
-
-		const fancyElementsCascade=document.querySelectorAll('.js-animate-on-visible-cascade');
-		fancyElementsCascade.forEach(item => {
-			observer2.observe(item);
-		});
-
-	} else {
-		//if Intersection Observer is not supported, add classes right away
-		$('.js-animate-on-visible-cascade').addClass('fancy-cascade');
-		$('.js-animate-on-visible').addClass('fancy');
-	}
-
+			}, 1000);
+		
+	});
 
 })( jQuery );
 
