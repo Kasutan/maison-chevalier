@@ -1,0 +1,45 @@
+/*Sauvegardde du CSS Custom saisi dans les paramètres du slider 
+* Ce fichier .scss n'est pas intégré au style du thème
+*/
+
+#slider-pro-3-225 .desc-in {
+	font-family: 'Open sans' !important;
+}
+
+#slider-pro-3-225 {
+	margin-bottom: 60px;
+}
+
+@media screen and (max-width:768px) {
+	#slider-pro-3-225 {
+		margin-top: 10vh
+	}
+}
+
+#slider-pro-3-225 .desc-in-bg {
+	background-color:transparent !important;
+	display: block !important;
+	margin: 0 !important;
+	max-width:unset !important;
+	padding: 50px 4px 4px !important;
+	opacity: 1 !important;
+	width:100% !important;
+}
+
+#slider-pro-3-225 .sp-buttons, #slider-pro-3-225 .desc-in-bg {
+	position: absolute !important;
+	top: calc(95vw - 38px) !important;
+	left: 0 !important
+}
+
+@media screen and (min-width:1030px) {
+	#slider-pro-3-225 .desc-in-bg {
+		padding-top: 30px !important;
+	}
+}
+
+@media screen and (min-width:1150px) {
+	#slider-pro-3-225 .sp-buttons, #slider-pro-3-225 .desc-in-bg {
+		top: 1100px !important;
+	}
+}

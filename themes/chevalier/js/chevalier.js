@@ -7,16 +7,13 @@
 
 	$( document ).ready(function() {
 	
-			setTimeout(function(){ 
 				var slider=$('#slider-pro-3-225 .sp-mask');
-				console.log(slider);
-				if(slider.length > 0 & window.Width() < 768) {
+				if(slider.length > 0 ) {
+					console.log('ajustement hauteur');
 					var sliderHeight=$(slider).outerHeight();
 					var newHeight=sliderHeight+140;
 					slider.css('height',newHeight+'px');
 				}
-
-			}, 1000);
 		
 	});
 
