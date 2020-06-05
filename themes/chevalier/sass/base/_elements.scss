@@ -125,39 +125,41 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: var(--noir-texte);
-	border: 1px solid var(--gris-decor);
+	border:none;
+	border-bottom: 1px solid var(--noir-texte);
 	border-radius: 0;
 	padding: 3px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-	color: var(--noir-texte);
-
-}
 
 select {
-	border: 1px solid var(--gris-decor);
+	border: 1px solid var(--noir-texte);
 }
 
 textarea {
+	color: var(--noir-texte);
+	border-radius: 0;
+	border: 1px solid var(--noir-texte);
+	margin-bottom:2rem;
+	margin-top:0.5rem;
 	width: 100%;
 }
 
+.contact-form {
+	max-width:500px;
+	margin:0 auto var(--margin-bottom);
+	label {
+		display: block;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="tel"] {
+		display:block;
+		width:100%;
+		margin-bottom:2rem;
+	}
+}
 
 /*--------------------------------------------------------------
 ## Search form
